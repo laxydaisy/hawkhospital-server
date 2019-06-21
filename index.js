@@ -25,7 +25,7 @@ app.get("/api/hawkhospital", (req, res) => {
     });
 });
 app.get("/api/home", (req, res) => {
-    pool.query("SELECT name,phone_number,email,image FROM doctor", (error, rows) => {
+    pool.query("SELECT name,phone_number,email,d_image FROM doctor", (error, rows) => {
         if (error) {
             return res.status(500).json({ error });
         }
@@ -34,26 +34,23 @@ app.get("/api/home", (req, res) => {
 });
 app.get("/api/doctor/:id/patient", (req, res) => {
     pool.query(
-        `SELECT d.name, d.phone_number, d.image, GROUP_CONCAT(t.id) treat
+        `SELECT d.d_id, d.name, d.phone_number, p.p_id
         FROM doctor d
-         JOIN treat t ON t.id = d.id
-         WHERE d.id = ?
-
-         GROUP BY d.id`,
-        
-        
+        JOIN patient p on p.d_id = d.d_id`,
      [req.params.id],       
      (error, rows) => {
         if (error) {
             return res.status(500).json({ error });
         }
         res.json(rows);
-    });
+    }
+
+    );
 });
 
-app.post("/api/hawkhospital_server", (req, res) => {
+/*app.post("/api/hawkhospital_server", (req, res) => {
     console.log(reg.body);
-});
+});*/
     
     
             
