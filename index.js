@@ -48,9 +48,22 @@ app.get("/api/doctor/:id/patient", (req, res) => {
     );
 });
 
-/*app.post("/api/hawkhospital_server", (req, res) => {
-    console.log(reg.body);
-});*/
+app.post("/api/hawkhospital_server", (req, res) => {
+    const doctor=req.body;
+    if(!doctor.name){
+        return res.status(400).json({error:"invalid payload"});
+    }
+    pool.query(
+        "INSERT INTO doctor(d.name) VALUE (?)",
+        [doctor.d.name],
+        (error, result)=>{
+          if (error){
+            return  res.status(500).json({error});
+          }
+          res.json(insertd.Id);  
+        }
+    )
+});
     
     
             
