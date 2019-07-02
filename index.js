@@ -51,12 +51,12 @@ app.get("/api/doctor/:id/patient", (req, res) => {
 app.post("/api/doctor", (req, res) => {
         const doctor = req.body;
 
-         if (!doctor.name) {
+         if (doctor.name="") {
              return res.status(400).json({ error: "Invalid payload" });
          }
     
          pool.query(
-             "INSERT INTO doctor (name) VALUES (?)",
+             "INSERT INTO doctor (name, phone_number, email, d_image) VALUES ('New', 071234567, 'default@gmail.com', 'img_003dg.jpg')",
              [doctor.name],
              (error, results) => {
                  if (error) {
