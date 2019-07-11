@@ -68,6 +68,26 @@ app.post("/api/doctor", (req, res) => {
          );
      });
 
+
+     app.put("/api/updateDoctor/:id", (req, res) => {
+        const doctor = req.body;
+
+         if (doctor.name="") {
+             return res.status(400).json({ error: "Invalid payload" });
+         }
+    
+         pool.query(
+             "UPDATE doctor SET name ='sharon' WHERE d_id=4",
+             [doctor.name],
+             (error, results) => {
+                 if (error) {
+                     return res.status(500).json({ error });
+                 }
+    
+                 res.json(results.insertId);
+             }
+         );
+     });
     
     
             
