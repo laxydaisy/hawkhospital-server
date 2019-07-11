@@ -88,6 +88,20 @@ app.post("/api/doctor", (req, res) => {
              }
          );
      });
+
+     app.delete("/api/doctor/:id", (req, res) => {
+             pool.query(
+                "DELETE FROM doctor WHERE d_id = 5",
+                 [req.params.id],
+                 (error, results) => {
+                     if (error) {
+                         return res.status(500).json({ error });
+                     }
+        
+                     res.json(results.affectedRows);
+                 }
+             );
+         });
     
     
             
