@@ -1,7 +1,8 @@
 import React from 'react';
-import logo from './logo.svg';
+import NavBar from'./NavBar';
+import doctor from './hawkhospital';
 import './App.css';
-
+  
 function App() {
   return (
     <div className="App">
