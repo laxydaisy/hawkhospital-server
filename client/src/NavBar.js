@@ -3,12 +3,12 @@ import './App.css';
 
 function NavBar() {
     return (
-        <div className="-container">
-            <nav className="-nav">
-                <a href="/">home</a>
-                <a href="/">middle</a>
-                <a href="/">last</a>
-                <a href="/admin">Admin</a>
+        <div className="home-container">
+            <nav className="home-nav">
+                <a href="/">HOME</a>
+                <a href="/DoctorList">MIDDLE</a>
+                <a href="/PatientList">LAST</a>
+                <a href="/admin">ADMIN</a>
             </nav>
         </div>
     );

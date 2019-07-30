@@ -6,7 +6,7 @@
   background: #fff;
 }
 
-.navbar-container {
+.home-container {
   position: relative;
   max-width: 960px;
   margin: 0 auto;
@@ -14,7 +14,7 @@
 }
 
 @media (min-width: 720px) {
-  .navbar-container {
+  .home-container {
       padding-left: 15px;
       padding-right: 30px;
   }
@@ -24,22 +24,27 @@
   padding: 15 60px;
 }
 
-.-nav {
+.home-nav {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   min-height: 48px;
   margin: 0 100px;
+  font-size: -webkit-xxx-large;
 }
 
-.-nav .-title {
+.home-nav .-title {
   font-size: 14.2rem;
   margin-right: 100px;
+  font-size: -webkit-xxx-large;
 }
 
-.-nav a {
+
+.home-nav a {
   font-size: 0.875rem;
   margin-right: 10px;
   color: #4299e1;
   text-decoration: none;
+  font-size: -webkit-xxx-large;
+
 }
