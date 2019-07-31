@@ -6,7 +6,7 @@
   background: #fff;
 }
 
-.home-container {
+.-container {
   position: relative;
   max-width: 960px;
   margin: 0 auto;
@@ -43,7 +43,7 @@
 .home-nav a {
   font-size: 0.875rem;
   margin-right: 10px;
-  color: #4299e1;
+  color: #e142b6;
   text-decoration: none;
   font-size: -webkit-xxx-large;
 

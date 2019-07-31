@@ -1,6 +1,8 @@
 import React from 'react';
 import NavBar from'./NavBar';
-// import doctor from './hawkhospital';
+import { Router } from "@reach/router";
+import Admin from "./Admin";
+import NotFound from "./NotFound";
 import './App.css';
 import Homepage from './HomePage';
   
@@ -10,13 +12,8 @@ function App() {
       <header className="daisy">
         <NavBar/>
       </header>
-      <main className="home-main">
-        <Router>
-          <Homepage path="/"/>
-          <DoctorList path="/DoctorList"/>
-          <PatientList path="/PatientList"/>
-          <Admin path="/Admin"/>
-        </Router>
+      <main className="hwls-main">
+         
       </main>
     </div>
   );

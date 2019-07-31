@@ -12,6 +12,7 @@
   "author": "Toroitich Daisy <toroitichdaisy@gmail.com>",
   "license": "ISC",
   "dependencies": {
+    "@reach/router": "^1.2.1",
     "axios": "^0.19.0",
     "dotenv": "^8.0.0",
     "express": "^4.16.4",
