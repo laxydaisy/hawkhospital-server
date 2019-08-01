@@ -6,7 +6,7 @@ import './App.css';
 class DoctorList extends React.Component{
     render() {
         
-                 const { moviesShowing, loading, error } = this.state;
+                 const { Home, loading, error } = this.state;
         
                  if (loading) {
                      return <Loading />;
@@ -30,16 +30,23 @@ componentDidMount();{
 }
 fetchHomepageinfo();{
             this.setState({ loading: true, error: false });
+
+                const { doctord_Id } = this.props;
+                const homepageinfoPromise = axios.get(`/api/doctor/${doctord_Id}`);
+            
     
             axios
-                .get("http://localhost:3000")
-                .then(response => {
+            .all([homepageinfoPromise])
+            .then(
+                 axios.spread((doctorlistResponse) => {
+                
                     this.setState({
                          Home: response.data,
                          loading: false,
                          error: false
                      });
                  })
+            )
                 .catch(error => {
                   this.setState({
                     Home: [],
@@ -48,7 +55,17 @@ fetchHomepageinfo();{
                 });
             });
         }
-   };
+        toDateString(dateTime); {
+            const date = new Date(dateTime);
+            const year = date.getFullYear();
+            const month = date.getMonth() + 1;
+          const day = date.getDate();
+            
+         return `${year}-${month}-${day}`;
+        }
+ 
+     }  
+        
 }
 
 export default DoctorList;
