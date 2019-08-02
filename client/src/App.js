@@ -1,19 +1,28 @@
 import React from 'react';
 import NavBar from'./NavBar';
 import { Router } from "@reach/router";
+import Homepage from './HomePage';
+import DoctorList from "./DoctorList";
+import Patient from "./Patient";
 import Admin from "./Admin";
 import NotFound from "./NotFound";
 import './App.css';
-import Homepage from './HomePage';
+
   
 function App() {
   return (
     <div className="navbar">
-      <header className="daisy">
+      <header className="hm">
         <NavBar/>
       </header>
       <main className="hwls-main">
-         
+         <Router>
+          <Homepage path="/" />
+          <DoctorList path="/doctor"/>
+          <Patient path="/patient" />
+          <Admin path="/admin" /> 
+          <NotFound default/>
+         </Router>
       </main>
     </div>
   );

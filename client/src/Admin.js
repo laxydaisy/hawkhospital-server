@@ -2,8 +2,8 @@ import React from "react";
 
 function Admin() {
     return (
-        <div>
-            <h1>Admin Page</h1>
+        <div className="hwls-fullpage-text">
+            <p>admin</p>
         </div>
     );
 }

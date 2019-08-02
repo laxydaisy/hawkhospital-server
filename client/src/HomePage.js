@@ -1,15 +1,27 @@
 import React from "react";
-import axios from "axios";
+import doctorimg from "./doctorimg.jpg";
+import patientimg from "./patientimg.jpeg";
+import './App.css';
 import { Link } from "@reach/router";
 
 
-function homepage({homepageinfo }){
-    const {doctor, patient} =homepageinfo;
-    return(
-        <div className= "hwls-homepage">
-        <div className= "hwls-doctor"> src={doctor}</div>
-        <div>className= "hwsl-patient"</div>
-      </div> 
-    );
+function Homepage() {
+  return (
+    <div className="hwls-homepage">
+      <h1>Home page</h1>
+      <div className="dipi">
+      <div className="di">
+      <img src={doctorimg} /><br />
+      <Link to="doctor">Doctor's info</Link>
+    </div>
+
+    <div className="pi">
+      <img src={patientimg} /> <br/>
+      <Link to="patient">Patient's info</Link>
+    </div>
+    </div>
+    </div>
+  );
 }
-export default homepage;
+
+export default Homepage;

@@ -5,10 +5,14 @@ function NavBar() {
     return (
         <div className="home-container">
             <nav className="home-nav">
-                <a href="/">HOME</a>
-                <a href="/DoctorList">Doctor</a>
-                <a href="/PatientList">Patient</a>
-                <a href="/admin">ADMIN</a>
+                <ul>
+                    <li>
+                        <Link to="/">HOME</Link>
+                        <Link to="/doctor">Doctor</Link>
+                        <Link to="/patient">Patient</Link>
+                        <Link to="/admin">Admin</Link>
+                    </li>
+                </ul>
             </nav>
         </div>
     );

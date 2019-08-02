@@ -39,6 +39,10 @@
   font-size: -webkit-xxx-large;
 }
 
+.home-nav ul{
+  list-style: none;
+
+}
 
 .home-nav a {
   font-size: 0.875rem;
@@ -47,4 +51,14 @@
   text-decoration: none;
   font-size: -webkit-xxx-large;
 
+}
+
+.hwls-homepage{
+  text-align: center;
+}
+.dipi{
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+  margin: auto;
 }

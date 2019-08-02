@@ -1,12 +1,11 @@
 import React from "react";
 
 
-function DoctorList() {
+function Patient() {
   return (
     <div className="hwls-homepage">
-          <h1>Doctor page</h1>
-          
+          <h1>Patient page</h1>
     </div>
   );
 }
-export default DoctorList;
+export default Patient;
